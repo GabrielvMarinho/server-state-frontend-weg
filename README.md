@@ -1,0 +1,1 @@
+Application to display data related to the server state
