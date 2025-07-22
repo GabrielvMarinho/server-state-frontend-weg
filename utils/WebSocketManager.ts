@@ -1,17 +1,18 @@
+import { BroadcastDTO } from "@/structures/BroadcastDTO"
 
 export class WebSocketManager{
     socket: WebSocket;
-    lastMessage: JSON;
+    broadcast: BroadcastDTO | null;
+    
     constructor(){
         const socket = new WebSocket(String(process.env["WS_URL"]))
         socket.onmessage = (event) => this.onMessage(event);
         this.socket = socket;
-        this.lastMessage = JSON.parse("{}");
-        
+        this.broadcast = null;
     }
     onMessage(event: any){
-        console.log(event.data)
-        this.lastMessage = event.data
+        var broadcast: BroadcastDTO = event.data
+        this.broadcast = broadcast
     }
     
 }
