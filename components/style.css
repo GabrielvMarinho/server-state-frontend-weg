@@ -1,19 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 :root{
-    --background-main-color: #fdfdfd;
-    --background-contrast-color: #0d0e13;
-    --background-toggle-background-color: #dadada;
+    --background-main-color: #ebebeb;
+    --background-contrast-color: #18181f;
+    --title-color: #18181f;
+    --contrast-title-color: #ebebeb;
+
     --transtition-time: 0.5s
 
 }
 [data-theme="dark"]{
     
-    --background-main-color: #0d0e13;
-    --background-contrast-color: #fdfdfd;
-    --background-toggle-background-color: #3a3d44;
+    --background-main-color: #18181f;
+    --background-contrast-color: #ebebeb;
+    --contrast-title-color: #18181f;
+
+    --title-color: #ebebeb;
     --transtition-time: 0.5s
 
 }
@@ -22,6 +31,11 @@ body{
 
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
     background-color: var(--background-main-color);
 }
 
@@ -34,8 +48,10 @@ body{
     width: fit-content;
     border-radius: 100px;
 }
-
-
+main{
+    width: 85vw;
+    height: 85vh;    
+}
 .themeIconDiv{
     background-color: var(--background-main-color);
     all: unset;
@@ -47,6 +63,46 @@ body{
     border: 1px solid transparent;
 
     transition: var(--transtition-time);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.mainTitle{
+    color: var(--title-color);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120px;
+    letter-spacing: -3px;
+}
+.mainTitle span{
+    color: var(--title-color);
+    font-weight: 600;
+    font-size: 72px;
+    letter-spacing: -5px;
+
+}
+.subTitle{
+    color: var(--title-color);
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: -5px;
+}
+.subTitle{
+    font-size: 42px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.subTitle span{
+    color: var(--title-color);
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: -1px;
 }
 .icon:hover{
     cursor: pointer;
@@ -64,4 +120,55 @@ body{
 
     transition: var(--transtition-time);
     border: 1px solid var(--background-contrast-color);
+}
+
+.capacityData{
+    margin-top: 40px;
+    margin-inline: auto;
+    display: flex;
+
+    flex-direction: column;
+    gap: 20px;
+}
+.runningMacros{
+    display: flex;
+}
+.macroSlot{
+    height: 100px;
+    padding: 15px;
+    display: flex;
+    flex: 1 0 0;
+    border: 1px solid var(--background-contrast-color);
+}
+.singleRunningMacro{
+    opacity: 0.95;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-contrast-color);
+}
+.singleEmptySlotMacro{
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singleEmptySlotMacro p{
+    color: var(--title-color);
+}
+
+
+.macroSlot h3{
+    color: var(--contrast-title-color);
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+.macroSlot label{
+    width: 100%;
+    text-align: right;
+    color: var(--contrast-title-color);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -1px;
 }
