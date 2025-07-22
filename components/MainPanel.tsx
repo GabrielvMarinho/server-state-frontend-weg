@@ -1,6 +1,7 @@
 "use client"
 import { BroadcastDTO } from "@/structures/BroadcastDTO"
 import { useEffect, useState } from "react"
+import ChangeTheme from "./ChangeTheme"
 
 export default function(){
     

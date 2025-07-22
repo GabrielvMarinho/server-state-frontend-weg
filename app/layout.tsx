@@ -1,8 +1,8 @@
+
+import { getTheme, getThemeCookies } from "@/utils/ThemeContext";
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import React from "react";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import theme from "@/components/theme"
 
 export const metadata: Metadata = {
     title: "serverStatePanel",
@@ -13,16 +13,12 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const theme = await getThemeCookies()
     return (
-        <html lang="en">
-            <body>
-                <AppRouterCacheProvider>
-                    <ThemeProvider theme={theme}>
-                        <CssBaseline>
-                            {children}
-                        </CssBaseline>
-                    </ThemeProvider>
-                </AppRouterCacheProvider>
+        <html lang="en" data-theme={theme}>
+
+            <body> 
+                {children}
             </body>
         </html>
     );
