@@ -1,6 +1,6 @@
-import IconProps from "@/structures/iconProps";
+import IconProps from "@/structures/IconProps";
 
-export default function(props: IconProps){
+export default function Sun(props: IconProps){
     return(
         <svg className="icon spinIcon" width={props.width} height={props.height} viewBox="0 0 800 800" fill={props.color} xmlns="http://www.w3.org/2000/svg">
             <path d="M600 400C600 510.457 510.457 600 400 600C289.543 600 200 510.457 200 400C200 289.543 289.543 200 400 200C510.457 200 600 289.543 600 400Z" fill={props.color}/>

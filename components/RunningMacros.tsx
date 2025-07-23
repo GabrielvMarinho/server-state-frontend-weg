@@ -1,10 +1,10 @@
-import { Macro } from "@/structures/Macro";
 
 interface Props{
-    macrosRunning: [Macro]
+    macrosRunning: [any]
 }
 
-export default function({macrosRunning}:Props){
+export default function RunningMacros({macrosRunning}:Props){
+    console.log(macrosRunning)
     var finalList = [...macrosRunning]
     finalList.length = 6;
     var numberOfMacros = 6;

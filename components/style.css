@@ -126,12 +126,12 @@ header{
     margin-top: 40px;
     margin-inline: auto;
     display: flex;
-
     flex-direction: column;
     gap: 20px;
 }
 .runningMacros{
     display: flex;
+    gap: 8px;
 }
 .macroSlot{
     height: 100px;

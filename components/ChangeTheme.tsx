@@ -1,11 +1,11 @@
 
 "use client"
-import Moon from "@/icons/moon";
-import Sun from "@/icons/sun";
+import Moon from "@/icons/Moon";
+import Sun from "@/icons/Sun";
 import { getThemeCookies, setThemeCookies } from "@/utils/ThemeContext";
 import { useEffect, useState } from "react";
 
-export default function(){
+export default function ChangeTheme(){
     const [theme, setTheme] = useState<any>(null)
     useEffect(() =>{
         const themeF = async () =>{
