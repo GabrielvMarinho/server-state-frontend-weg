@@ -4,7 +4,7 @@ interface Props{
 }
 
 export default function RunningMacros({macrosRunning}:Props){
-    console.log(macrosRunning)
+
     var finalList = [...macrosRunning]
     finalList.length = 6;
     var numberOfMacros = 6;

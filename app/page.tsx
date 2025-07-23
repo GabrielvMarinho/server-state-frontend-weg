@@ -10,7 +10,6 @@ export default function Home() {
     useEffect(() =>{
         const ws_url = String(process.env["NEXT_PUBLIC_WS_URL"])
         const socket = new WebSocket(ws_url)
-        console.log("new socket")
         socket.onmessage = (event) => {
             
             var json_content = JSON.parse(event.data)
