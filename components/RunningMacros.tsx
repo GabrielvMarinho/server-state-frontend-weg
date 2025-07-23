@@ -1,11 +1,12 @@
 import { Macro } from "@/structures/Macro";
+
 interface Props{
     macrosRunning: [Macro]
 }
+
 export default function({macrosRunning}:Props){
     var finalList = [...macrosRunning]
     finalList.length = 6;
-    finalList.map(macro => console.log(macro))
     var numberOfMacros = 6;
     for(let i=0; i< finalList.length; i++){
         if(finalList[i] == undefined){
@@ -18,15 +19,14 @@ export default function({macrosRunning}:Props){
             <h2 className="subTitle"><span>Capacidade</span> {numberOfMacros}/6</h2>
             <div className="runningMacros">
 
-                {finalList.map(macro =>(
+                {finalList.map((macro, key) =>(
                     macro?
-                    <div className="macroSlot singleRunningMacro">
+                    <div key={macro.name} className="macroSlot singleRunningMacro">
                         <h3>{macro.name}</h3>
-                        <label>Começou: {macro.time_started}</label>
+                        <label>Iniciou: {macro.time_started}</label>
                     </div>
                     :
-
-                    <div className="macroSlot singleEmptySlotMacro">
+                    <div key={key} className="macroSlot singleEmptySlotMacro">
                         <p>Vazio</p>
                     </div>
                 ))}

@@ -11,6 +11,5 @@ export async function getThemeCookies(){
 }   
 export async function setThemeCookies(theme: string){
     const cookieStore = cookies()
-    console.log("new theme", theme)
     cookieStore.set("theme", theme)
 }

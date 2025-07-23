@@ -13,16 +13,15 @@ export default function(){
         }  
         themeF()
     }, [])
-    console.log(theme)
     return (
         <div className="toggleTheme">
-                <button className={theme=="dark"?"themeIconDiv selectedThemeIcon":"themeIconDiv"} onClick={() =>{setTheme("dark"); setThemeCookies("dark")}}>
-                    <Moon height="28px" width="28px" color={theme=="dark"?"var(--background-contrast-color)":"var(--background-contrast-color)"}></Moon>
-                </button>
-            
-                <button className={theme=="light"?"themeIconDiv selectedThemeIcon":"themeIconDiv"} onClick={() =>{setTheme("light"); setThemeCookies("light")}}>
-                    <Sun height="28px" width="28px" color={theme=="light"?"var(--background-contrast-color)":"var(--background-contrast-color)"}></Sun>
-                </button>
+            <button className={theme=="dark"?"themeIconDiv selectedThemeIcon":"themeIconDiv"} onClick={() =>{setTheme("dark"); setThemeCookies("dark")}}>
+                <Moon height="28px" width="28px" color={theme=="dark"?"var(--background-contrast-color)":"var(--background-contrast-color)"}></Moon>
+            </button>
+        
+            <button className={theme=="light"?"themeIconDiv selectedThemeIcon":"themeIconDiv"} onClick={() =>{setTheme("light"); setThemeCookies("light")}}>
+                <Sun height="28px" width="28px" color={theme=="light"?"var(--background-contrast-color)":"var(--background-contrast-color)"}></Sun>
+            </button>
         </div>
     )
 }

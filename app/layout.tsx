@@ -1,7 +1,6 @@
 
-import { getTheme, getThemeCookies } from "@/utils/ThemeContext";
+import { getThemeCookies } from "@/utils/ThemeContext";
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import React from "react";
 
 export const metadata: Metadata = {
